@@ -57,6 +57,7 @@ function plantilla({ archivo, titulo, descripcion, cuerpo }) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${titulo}</title>
+  <meta name="robots" content="noindex, nofollow">
   <meta name="description" content="${descripcion}">
   <meta property="og:title" content="${titulo}">
   <meta property="og:description" content="${descripcion}">
