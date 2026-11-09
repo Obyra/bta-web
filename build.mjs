@@ -104,7 +104,7 @@ ${cuerpo}
       </ul>
     </div>
     <div>
-      <h4>Argentina · Representación</h4>
+      <h4>Argentina · Centro y Sudamérica</h4>
       <ul>
         <li>Brenda Priscila Koldobsky</li>
         <li>Gustavo Adrián Ochora</li>
@@ -206,7 +206,7 @@ paginas.push({
       <div class="tarjeta lateral verde"><h3>Alineados con el éxito</h3><p>Honorarios ligados al cierre de la financiación.</p></div>
       <div class="tarjeta lateral verde"><h3>Experiencia senior</h3><p>Equipo con trayectoria directiva en financiación, industria y mercados internacionales.</p></div>
     </div>
-    <div class="sellos"><span>100% independiente</span><span>ECA · Deuda · Equity</span><span>Alcance global</span><span>Base en España y UE</span></div>
+    <div class="sellos"><span>100% independiente</span><span>ECA · Deuda · Equity</span><span>España · Centro y Sudamérica</span><span>Base en España y UE</span></div>
   </div>
 </section>
 ${llamada('¿Tiene un proyecto que necesita financiación?', 'Un único interlocutor coordina agencias de crédito a la exportación, bancos, bancos de desarrollo, inversores y contratistas. Cuéntenos el proyecto y le diremos qué estructura es viable.')}`,
@@ -399,9 +399,9 @@ ${llamada('Un único interlocutor', 'Agencias de crédito a la exportación, ban
 paginas.push({
   archivo: 'presencia.html',
   titulo: 'Presencia · BTA',
-  descripcion: 'Sede en España, representación en Argentina y alcance global con foco en mercados emergentes.',
+  descripcion: 'Sede en España, representación en Argentina para Centro y Sudamérica y alcance global con foco en mercados emergentes.',
   cuerpo: `
-${cabeceraPagina('Business Transformation Associates S.L.', 'Presencia', 'Base en España y la Unión Europea, representación en Argentina y operaciones en mercados emergentes de todo el mundo.')}
+${cabeceraPagina('Business Transformation Associates S.L.', 'Presencia', 'Base en España y la Unión Europea, representación en Argentina para Centro y Sudamérica y operaciones en mercados emergentes de todo el mundo.')}
 
 <section class="seccion sin-borde">
   <div class="contenedor">
@@ -413,10 +413,27 @@ ${cabeceraPagina('Business Transformation Associates S.L.', 'Presencia', 'Base e
       </div>
       <div class="oficina verde">
         <p class="pais">Argentina</p>
-        <p class="rol">Representación</p>
+        <p class="rol">Representación · Centro y Sudamérica</p>
         <p>Brenda Priscila Koldobsky · Directora Asociada<br>Gustavo Adrián Ochora · Director Asociado<br><a href="contacto.html">Escribir a Argentina</a></p>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="contenedor">
+    <p class="antetitulo">Presencia regional</p>
+    <h2>Centro y Sudamérica</h2>
+    <p class="intro">Desde Argentina, BTA acompaña a promotores, empresas y gobiernos de toda la región en la financiación de sus proyectos con agencias de crédito a la exportación, bancos de desarrollo regionales y banca internacional.</p>
+    <div class="rejilla r3">
+      <div class="tarjeta verde"><h3>Cono Sur</h3><p>Argentina, Chile, Uruguay y Paraguay.</p></div>
+      <div class="tarjeta verde"><h3>Brasil</h3><p>Energía, infraestructura, agroindustria e industria.</p></div>
+      <div class="tarjeta verde"><h3>Región andina</h3><p>Perú, Bolivia, Ecuador y Colombia.</p></div>
+      <div class="tarjeta"><h3>Centroamérica</h3><p>Guatemala, Honduras, El Salvador, Nicaragua, Costa Rica y Panamá.</p></div>
+      <div class="tarjeta"><h3>Caribe</h3><p>República Dominicana y el resto del Caribe.</p></div>
+      <div class="tarjeta"><h3>México</h3><p>Proyectos industriales, energéticos y de infraestructura.</p></div>
+    </div>
+    <div class="banda-oro"><b>BTA</b><span>Un mismo equipo entre España y Argentina, con acceso a todas las ECAs y a los bancos de desarrollo regionales</span></div>
   </div>
 </section>
 
@@ -611,7 +628,7 @@ ${cabeceraPagina('Business Transformation Associates S.L.', 'Contacto', 'Cuénte
         <div><dt>Correo</dt><dd><a href="mailto:${EMAIL}">${EMAIL}</a></dd></div>
         <div><dt>Web</dt><dd>${WEB}</dd></div>
         <div><dt>España · Sede</dt><dd>Jávea, Alicante · España<br>José Ignacio Bermejo · Presidente y Director</dd></div>
-        <div><dt>Argentina · Representación</dt><dd>Brenda Priscila Koldobsky · Directora Asociada<br>Gustavo Adrián Ochora · Director Asociado</dd></div>
+        <div><dt>Argentina · Centro y Sudamérica</dt><dd>Brenda Priscila Koldobsky · Directora Asociada<br>Gustavo Adrián Ochora · Director Asociado</dd></div>
         <div><dt>Datos fiscales</dt><dd>VAT B09657271 · CNAE 7022</dd></div>
       </dl>
     </div>
