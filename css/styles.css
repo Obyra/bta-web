@@ -97,7 +97,7 @@ h3 { font-size: 20px; font-weight: 700; color: var(--crema); line-height: 1.3; m
 .boton-oro:hover { background: #dab452; border-color: #dab452; }
 .boton-linea { color: var(--oro); }
 .boton-linea:hover { background: var(--oro); color: var(--noche); }
-.portada-sello { display: flex; justify-content: center; }
+.portada-sello { position: absolute; top: 0; bottom: 0; right: 0; width: 42%; padding-left: 4px; display: flex; align-items: center; justify-content: center; }
 .portada-sello svg { width: min(360px, 80%); height: auto; }
 .portada::after {
   content: ""; position: absolute; inset: 0 0 0 auto; width: 42%; z-index: -1;
