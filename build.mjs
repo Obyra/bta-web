@@ -89,7 +89,7 @@ function plantilla({ archivo, titulo, descripcion, cuerpo }) {
   <div class="contenedor">
     <a class="marca" href="index.html" aria-label="BTA · Business Transformation Associates, inicio">
       <span class="marca-sello">BTA</span>
-      <span class="marca-texto">Business Transformation<span>Associates S.L.</span></span>
+      <span class="marca-texto">Business<br>Transformation<span>Associates S.L.</span></span>
     </a>
     <nav aria-label="Principal">
       <button class="hamburguesa" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"><span></span><span></span><span></span></button>

@@ -305,7 +305,6 @@ form button { border: 0; cursor: pointer; font: inherit; font-weight: 700; }
   body { font-size: 16px; }
   .contenedor { padding: 0 16px; }
   .seccion { padding: 76px 0; }
-  .marca-texto { display: none; }
   .r2, .r3, .r4, .r-estructuras, .pasos.cuatro, .pasos.cinco, .cifras, .sellos, .fila { grid-template-columns: 1fr; }
   .lista-def div { grid-template-columns: 1fr; gap: 4px; }
   .banda-oro { flex-direction: column; align-items: flex-start; gap: 6px; }
@@ -343,7 +342,7 @@ form button { border: 0; cursor: pointer; font: inherit; font-weight: 700; }
 .pasos-acceso { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 36px; }
 .pasos-acceso li { background: var(--noche); border-top: 5px solid var(--oro); padding: 24px; color: var(--texto-suave); }
 .pasos-acceso b { display: block; font-family: var(--serif); font-size: 34px; color: var(--oro); line-height: 1.2; margin-bottom: 8px; }
-@media (max-width: 1700px) { .marca-texto { display: none; } }
+
 @media (max-width: 1240px) {
   .hamburguesa { display: block; }
   .menu {
@@ -365,4 +364,9 @@ form button { border: 0; cursor: pointer; font: inherit; font-weight: 700; }
   .cabecera-pagina { border-left-width: 10px; padding: 64px 0 50px; }
   .glosario, .pasos-acceso { grid-template-columns: 1fr; }
 }
-@media (max-width: 640px) { .marca-texto { display: none; } .cabecera .contenedor { padding: 0 16px; } }
+@media (max-width: 640px) { .cabecera .contenedor { padding: 0 16px; } }
+@media (min-width: 1241px) and (max-width: 1440px) {
+  .cabecera .contenedor { padding: 0 28px; gap: 36px; }
+  .menu { gap: 16px; }
+  .menu a { font-size: 14px; }
+}
