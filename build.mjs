@@ -8,6 +8,20 @@ const RAIZ = dirname(fileURLToPath(import.meta.url));
 const EMAIL = 'administration@bta-consulting.com';
 const WEB = 'www.bta-consulting.com';
 
+// Equipo de Argentina: se usa en Equipo, Presencia, Contacto y el pie.
+// tel: solo dígitos con +; vacío = todavía no lo tenemos y no se muestra.
+const ARGENTINA = [
+  { nombre: 'Brenda Priscila Koldobsky', iniciales: 'BPK', cargo: 'Directora General', tel: '+5491164820441', telVer: '+54 9 11 6482-0441', mail: 'brendak@btaasociados.es',
+    bio: 'Directora general de BTA en Argentina. Acompaña a promotores y empresas argentinas en la preparación de sus proyectos para la financiación internacional.' },
+  { nombre: 'Gustavo Adrián Ochoa', iniciales: 'GAO', cargo: 'Director Comercial', tel: '+5493512502346', telVer: '+54 9 351 250-2346', mail: 'gustavoochoa@btaasociados.es',
+    bio: 'Director comercial de BTA en Argentina. Identifica proyectos y empresas con necesidades de financiación y es su primer punto de contacto con la firma.' },
+  { nombre: 'Adrián Rodríguez', iniciales: 'AR', cargo: 'Project Manager', tel: '+5491165387954', telVer: '+54 9 11 6538-7954', mail: '',
+    bio: 'Project manager de BTA en Argentina. Coordina el día a día de cada proyecto, la documentación y los plazos con promotores, bancos y contratistas.' },
+];
+const telLink = (p) => p.tel ? `<a href="tel:${p.tel}">${p.telVer}</a>` : '';
+const mailLink = (p) => p.mail ? `<a href="mailto:${p.mail}">${p.mail}</a>` : '';
+const contactoPersona = (p) => [telLink(p), mailLink(p)].filter(Boolean).join('<br>');
+
 const MENU = [
   ['index.html', 'Inicio'],
   ['servicios.html', 'Servicios'],
@@ -107,8 +121,7 @@ ${cuerpo}
     <div>
       <h4>Argentina · Centro y Sudamérica</h4>
       <ul>
-        <li>Brenda Priscila Koldobsky</li>
-        <li>Gustavo Adrián Ochora</li>
+${ARGENTINA.map(p => `        <li>${p.nombre}</li>`).join(' ')}
         <li><a href="contacto.html">Escribir a Argentina</a></li>
       </ul>
     </div>
@@ -372,24 +385,17 @@ ${cabeceraPagina('Business Transformation Associates S.L.', 'Equipo', 'Equipo co
       </article>
     </div>
 
-    <p class="antetitulo" style="margin-top:60px">Directores asociados · Argentina</p>
+    <p class="antetitulo" style="margin-top:60px">Equipo · Argentina</p>
     <div class="rejilla r2 sin-margen">
-      <article class="persona verde">
-        <div class="iniciales" aria-hidden="true">BPK</div>
+${ARGENTINA.map(p => `      <article class="persona verde">
+        <div class="iniciales" aria-hidden="true">${p.iniciales}</div>
         <div>
-          <h3>Brenda Priscila Koldobsky</h3>
-          <p class="cargo">Directora Asociada · Argentina</p>
-          <p>Directora de BTA en Argentina. Acompaña a promotores y empresas argentinas en la preparación de sus proyectos para la financiación internacional.</p>
+          <h3>${p.nombre}</h3>
+          <p class="cargo">${p.cargo} · Argentina</p>
+          <p>${p.bio}</p>
+          ${contactoPersona(p) ? `<p class="mail">${contactoPersona(p)}</p>` : ''}
         </div>
-      </article>
-      <article class="persona verde">
-        <div class="iniciales" aria-hidden="true">GAO</div>
-        <div>
-          <h3>Gustavo Adrián Ochora</h3>
-          <p class="cargo">Director Asociado · Argentina</p>
-          <p>Director comercial de BTA en Argentina. Identifica proyectos y empresas con necesidades de financiación y es su primer punto de contacto con la firma.</p>
-        </div>
-      </article>
+      </article>`).join(' ')}
     </div>
   </div>
 </section>
@@ -415,7 +421,7 @@ ${cabeceraPagina('Business Transformation Associates S.L.', 'Presencia', 'Base e
       <div class="oficina verde">
         <p class="pais">Argentina</p>
         <p class="rol">Representación · Centro y Sudamérica</p>
-        <p>Brenda Priscila Koldobsky · Directora Asociada<br>Gustavo Adrián Ochora · Director Asociado<br><a href="contacto.html">Escribir a Argentina</a></p>
+        <p>${ARGENTINA.map(p => `${p.nombre} · ${p.cargo}`).join('<br>')}<br><a href="contacto.html">Escribir a Argentina</a></p>
       </div>
     </div>
   </div>
@@ -629,7 +635,7 @@ ${cabeceraPagina('Business Transformation Associates S.L.', 'Contacto', 'Cuénte
         <div><dt>Correo</dt><dd><a href="mailto:${EMAIL}">${EMAIL}</a></dd></div>
         <div><dt>Web</dt><dd>${WEB}</dd></div>
         <div><dt>España · Sede</dt><dd>Jávea, Alicante · España<br>José Ignacio Bermejo · Presidente y Director</dd></div>
-        <div><dt>Argentina · Centro y Sudamérica</dt><dd>Brenda Priscila Koldobsky · Directora Asociada<br>Gustavo Adrián Ochora · Director Asociado</dd></div>
+        <div><dt>Argentina · Centro y Sudamérica</dt><dd>${ARGENTINA.map(p => `<strong>${p.nombre}</strong> · ${p.cargo}${contactoPersona(p) ? '<br>' + contactoPersona(p) : ''}`).join('<br><br>')}</dd></div>
         <div><dt>Datos fiscales</dt><dd>VAT B09657271 · CNAE 7022</dd></div>
       </dl>
     </div>
