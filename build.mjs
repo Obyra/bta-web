@@ -15,7 +15,7 @@ const ARGENTINA = [
     bio: 'Directora general de BTA en Argentina. Acompaña a promotores y empresas argentinas en la preparación de sus proyectos para la financiación internacional.' },
   { nombre: 'Gustavo Adrián Ochoa', iniciales: 'GAO', cargo: 'Director Comercial', tel: '+5493512502346', telVer: '+54 9 351 250-2346', mail: 'gustavoochoa@btaasociados.es',
     bio: 'Director comercial de BTA en Argentina. Identifica proyectos y empresas con necesidades de financiación y es su primer punto de contacto con la firma.' },
-  { nombre: 'Adrián Rodríguez', iniciales: 'AR', cargo: 'Project Manager', tel: '+5491165387954', telVer: '+54 9 11 6538-7954', mail: '',
+  { nombre: 'Adrián Rodríguez', iniciales: 'AR', cargo: 'Project Manager', tel: '+5491165387954', telVer: '+54 9 11 6538-7954', mail: 'adrianrodriguez@btaasociados.es',
     bio: 'Project manager de BTA en Argentina. Coordina el día a día de cada proyecto, la documentación y los plazos con promotores, bancos y contratistas.' },
 ];
 const telLink = (p) => p.tel ? `<a href="tel:${p.tel}">${p.telVer}</a>` : '';
@@ -372,15 +372,15 @@ ${cabeceraPagina('Business Transformation Associates S.L.', 'Equipo', 'Equipo co
 
 <section class="seccion azul">
   <div class="contenedor">
-    <p class="antetitulo">Dirección · España</p>
+    <p class="antetitulo">Dirección · Europa</p>
     <div class="rejilla r1 sin-margen">
       <article class="persona destacada">
         <div class="iniciales" aria-hidden="true">JIB</div>
         <div>
           <h3>José Ignacio Bermejo</h3>
-          <p class="cargo">Presidente y Director · España</p>
+          <p class="cargo">Presidente &amp; CEO · Europa</p>
           <p>Dirige la firma desde su sede en Jávea (Alicante). Coordina la relación con las agencias de crédito a la exportación, la banca comercial y multilateral y los inversores, y supervisa la estructuración de cada operación hasta el cierre financiero.</p>
-          <p class="mail"><a href="mailto:${EMAIL}">${EMAIL}</a></p>
+          <p class="mail"><a href="mailto:admin@btaasociados.es">admin@btaasociados.es</a></p>
         </div>
       </article>
     </div>
@@ -634,7 +634,7 @@ ${cabeceraPagina('Business Transformation Associates S.L.', 'Contacto', 'Cuénte
       <dl>
         <div><dt>Correo</dt><dd><a href="mailto:${EMAIL}">${EMAIL}</a></dd></div>
         <div><dt>Web</dt><dd>${WEB}</dd></div>
-        <div><dt>España · Sede</dt><dd>Jávea, Alicante · España<br>José Ignacio Bermejo · Presidente y Director</dd></div>
+        <div><dt>España · Sede</dt><dd>Jávea, Alicante · España<br>José Ignacio Bermejo · Presidente &amp; CEO · Europa<br><a href="mailto:admin@btaasociados.es">admin@btaasociados.es</a></dd></div>
         <div><dt>Argentina · Centro y Sudamérica</dt><dd>${ARGENTINA.map(p => `<strong>${p.nombre}</strong> · ${p.cargo}${contactoPersona(p) ? '<br>' + contactoPersona(p) : ''}`).join('<br><br>')}</dd></div>
         <div><dt>Datos fiscales</dt><dd>VAT B09657271 · CNAE 7022</dd></div>
       </dl>
