@@ -5,8 +5,9 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const RAIZ = dirname(fileURLToPath(import.meta.url));
-const EMAIL = 'administration@bta-consulting.com';
-const WEB = 'www.bta-consulting.com';
+const EMAIL = 'jibermejo@btaasociados.es';     // Europa e internacional
+const EMAIL_AR = 'brendak@btaasociados.es';    // Argentina · Centro y Sudamérica
+const WEB = 'www.btaasociados.com';
 
 // Equipo de Argentina: se usa en Equipo, Presencia, Contacto y el pie.
 // tel: solo dígitos con +; vacío = todavía no lo tenemos y no se muestra.
@@ -122,7 +123,7 @@ ${cuerpo}
       <h4>Argentina · Centro y Sudamérica</h4>
       <ul>
 ${ARGENTINA.map(p => `        <li>${p.nombre}</li>`).join(' ')}
-        <li><a href="contacto.html">Escribir a Argentina</a></li>
+        <li><a href="mailto:${EMAIL_AR}">${EMAIL_AR}</a></li>
       </ul>
     </div>
     <div class="pie-legal">
@@ -380,7 +381,7 @@ ${cabeceraPagina('Business Transformation Associates S.L.', 'Equipo', 'Equipo co
           <h3>José Ignacio Bermejo</h3>
           <p class="cargo">Presidente &amp; CEO · Europa</p>
           <p>Dirige la firma desde su sede en Jávea (Alicante). Coordina la relación con las agencias de crédito a la exportación, la banca comercial y multilateral y los inversores, y supervisa la estructuración de cada operación hasta el cierre financiero.</p>
-          <p class="mail"><a href="mailto:admin@btaasociados.es">admin@btaasociados.es</a></p>
+          <p class="mail"><a href="mailto:jibermejo@btaasociados.es">jibermejo@btaasociados.es</a></p>
         </div>
       </article>
     </div>
@@ -632,9 +633,9 @@ ${cabeceraPagina('Business Transformation Associates S.L.', 'Contacto', 'Cuénte
   <div class="contenedor contacto sin-margen">
     <div class="datos">
       <dl>
-        <div><dt>Correo</dt><dd><a href="mailto:${EMAIL}">${EMAIL}</a></dd></div>
+        <div><dt>Correo</dt><dd>Europa e internacional: <a href="mailto:${EMAIL}">${EMAIL}</a><br>Argentina, Centro y Sudamérica: <a href="mailto:${EMAIL_AR}">${EMAIL_AR}</a></dd></div>
         <div><dt>Web</dt><dd>${WEB}</dd></div>
-        <div><dt>España · Sede</dt><dd>Jávea, Alicante · España<br>José Ignacio Bermejo · Presidente &amp; CEO · Europa<br><a href="mailto:admin@btaasociados.es">admin@btaasociados.es</a></dd></div>
+        <div><dt>España · Sede</dt><dd>Jávea, Alicante · España<br>José Ignacio Bermejo · Presidente &amp; CEO · Europa<br><a href="mailto:${EMAIL}">${EMAIL}</a></dd></div>
         <div><dt>Argentina · Centro y Sudamérica</dt><dd>${ARGENTINA.map(p => `<strong>${p.nombre}</strong> · ${p.cargo}${contactoPersona(p) ? '<br>' + contactoPersona(p) : ''}`).join('<br><br>')}</dd></div>
         <div><dt>Datos fiscales</dt><dd>VAT B09657271 · CNAE 7022</dd></div>
       </dl>
@@ -659,10 +660,15 @@ ${cabeceraPagina('Business Transformation Associates S.L.', 'Contacto', 'Cuénte
             <option>Otra consulta</option>
           </select></div>
       </div>
+      <div class="campo"><label for="oficina">Oficina *</label>
+        <select id="oficina" name="oficina" required>
+          <option value="${EMAIL}">Europa e internacional</option>
+          <option value="${EMAIL_AR}">Argentina, Centro y Sudamérica</option>
+        </select></div>
       <div class="campo"><label for="mensaje">Mensaje *</label><textarea id="mensaje" name="mensaje" required placeholder="Promotor, país, importe aproximado, contratista y origen de los equipos"></textarea></div>
       <label class="casilla"><input type="checkbox" name="acepto" required> <span>He leído la <a href="disclaimer.html">política de privacidad</a> y acepto que se usen mis datos para responder a la consulta.</span></label>
       <button class="boton boton-oro" type="submit">Enviar consulta</button>
-      <p class="form-aviso">Al enviar se abrirá su programa de correo con el mensaje preparado. Si prefiere, escriba directamente a ${EMAIL}.</p>
+      <p class="form-aviso">Al enviar se abrirá su programa de correo con el mensaje preparado. Si prefiere, escriba directamente a ${EMAIL} (Europa e internacional) o a ${EMAIL_AR} (Argentina, Centro y Sudamérica).</p>
     </form>
   </div>
 </section>`,

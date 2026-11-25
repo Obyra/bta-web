@@ -24,7 +24,7 @@ if (form) {
     e.preventDefault();
     if (!form.reportValidity()) return;
     const d = new FormData(form);
-    const destino = form.dataset.destino;
+    const destino = d.get('oficina') || form.dataset.destino;
     const asunto = `Consulta web BTA · ${d.get('tipo')} · ${d.get('empresa') || d.get('nombre')}`;
     const cuerpo = [
       `Nombre: ${d.get('nombre')}`,
