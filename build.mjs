@@ -12,11 +12,11 @@ const WEB = 'www.btaasociados.com';
 // Equipo de Argentina: se usa en Equipo, Presencia, Contacto y el pie.
 // tel: solo dígitos con +; vacío = todavía no lo tenemos y no se muestra.
 const ARGENTINA = [
-  { nombre: 'Brenda Priscila Koldobsky', iniciales: 'BPK', cargo: 'Directora General', tel: '+5491164820441', telVer: '+54 9 11 6482-0441', mail: 'brendak@btaasociados.es',
+  { nombre: 'Brenda Priscila Koldobsky', iniciales: 'BPK', foto: 'img/equipo-brenda-koldobsky.jpg', cargo: 'Directora General', tel: '+5491164820441', telVer: '+54 9 11 6482-0441', mail: 'brendak@btaasociados.es',
     bio: 'Directora general de BTA en Argentina. Acompaña a promotores y empresas argentinas en la preparación de sus proyectos para la financiación internacional.' },
   { nombre: 'Gustavo Adrián Ochoa', iniciales: 'GAO', foto: 'img/equipo-gustavo-ochoa.jpg', cargo: 'Director Comercial', tel: '+5493512502346', telVer: '+54 9 351 250-2346', mail: 'gustavoochoa@btaasociados.es',
     bio: 'Director comercial de BTA en Argentina. Identifica proyectos y empresas con necesidades de financiación y es su primer punto de contacto con la firma.' },
-  { nombre: 'Adrián Rodríguez', iniciales: 'AR', cargo: 'Project Manager', tel: '+5491165387954', telVer: '+54 9 11 6538-7954', mail: 'adrianrodriguez@btaasociados.es',
+  { nombre: 'Adrián Rodríguez', iniciales: 'AR', foto: 'img/equipo-adrian-rodriguez.jpg', cargo: 'Project Manager', tel: '+5491165387954', telVer: '+54 9 11 6538-7954', mail: 'adrianrodriguez@btaasociados.es',
     bio: 'Project manager de BTA en Argentina. Coordina el día a día de cada proyecto, la documentación y los plazos con promotores, bancos y contratistas.' },
 ];
 // Foto si la hay; si no, el círculo con las iniciales.
