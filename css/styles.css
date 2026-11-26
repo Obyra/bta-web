@@ -325,6 +325,15 @@ form button { border: 0; cursor: pointer; font: inherit; font-weight: 700; }
 .menu a.activo::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--oro); }
 .cabecera-pagina { padding: 90px 0 70px; border-left: 18px solid var(--oro); background: var(--azul);
   background-image: repeating-linear-gradient(90deg, rgba(255,255,255,0.025) 0 1px, transparent 1px 32px); }
+.cabecera-pagina.gris {
+  background-color: #2e333c;
+  background-image:
+    url("../img/banner-gris.svg"),
+    linear-gradient(115deg, #262a31 0%, #353b45 55%, #454c58 100%);
+  background-repeat: no-repeat; background-position: right bottom, 0 0; background-size: auto 100%, cover;
+  border-bottom: 4px solid var(--oro);
+}
+.cabecera-pagina.gris .intro { color: #e3e5e9; }
 .cabecera-pagina h1 { font-size: clamp(36px, 5.5vw, 62px); color: var(--crema); margin-bottom: 20px; }
 .seccion.sin-borde { border-top: 0; }
 .seccion.borde-fino { border-top: 1px solid #d3ccb9; }
@@ -362,6 +371,13 @@ form button { border: 0; cursor: pointer; font: inherit; font-weight: 700; }
 }
 @media (max-width: 960px) {
   .cabecera-pagina { border-left-width: 10px; padding: 64px 0 50px; }
+  .cabecera-pagina.gris {
+    background-image:
+      linear-gradient(90deg, rgba(38,42,49,.92) 0%, rgba(46,51,60,.75) 60%, rgba(46,51,60,.35) 100%),
+      url("../img/banner-gris.svg"),
+      linear-gradient(115deg, #262a31 0%, #353b45 55%, #454c58 100%);
+    background-position: 0 0, 70% bottom, 0 0; background-size: cover, auto 100%, cover;
+  }
   .glosario, .pasos-acceso { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) { .cabecera .contenedor { padding: 0 16px; } }

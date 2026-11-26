@@ -45,8 +45,8 @@ const ICONOS = {
 };
 const icono = (n) => `<svg class="icono" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONOS[n]}</svg>`;
 
-const cabeceraPagina = (antetitulo, titulo, intro = '') => `
-<section class="cabecera-pagina">
+const cabeceraPagina = (antetitulo, titulo, intro = '', variante = '') => `
+<section class="cabecera-pagina${variante ? ' ' + variante : ''}">
   <div class="contenedor">
     <p class="antetitulo">${antetitulo}</p>
     <h1>${titulo}</h1>
@@ -368,7 +368,7 @@ paginas.push({
   titulo: 'Equipo · BTA',
   descripcion: 'Equipo directivo de BTA en España y Argentina.',
   cuerpo: `
-${cabeceraPagina('Business Transformation Associates S.L.', 'Equipo', 'Equipo con trayectoria directiva en financiación, industria y mercados internacionales.')}
+${cabeceraPagina('Business Transformation Associates S.L.', 'Equipo', 'Equipo con trayectoria directiva en financiación, industria y mercados internacionales.', 'gris')}
 
 <section class="seccion azul">
   <div class="contenedor">
