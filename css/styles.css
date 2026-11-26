@@ -228,6 +228,7 @@ tbody td:first-child { font-weight: 700; }
   display: grid; place-items: center; font-family: var(--serif); font-weight: 700; font-size: 24px; color: var(--oro);
 }
 .persona.verde .iniciales { border-color: var(--verde-claro); color: var(--verde-claro); }
+img.iniciales.foto { width: 112px; height: 112px; object-fit: cover; border-width: 2px; padding: 3px; background: var(--noche); }
 .persona h3 { font-size: 21px; }
 .persona .cargo { color: var(--oro); font-weight: 700; margin-bottom: 8px; }
 .persona.verde .cargo { color: var(--verde-claro); }
@@ -341,6 +342,7 @@ form button { border: 0; cursor: pointer; font: inherit; font-weight: 700; }
 .r1 { grid-template-columns: 1fr; }
 .persona.destacada { padding: 36px; }
 .persona.destacada .iniciales { width: 96px; height: 96px; font-size: 28px; }
+.persona.destacada img.iniciales.foto { width: 150px; height: 150px; }
 .persona .mail { margin-top: 10px; }
 .persona .mail a { color: var(--crema); text-underline-offset: 4px; text-decoration-color: var(--oro); }
 .llamada h2 { margin-bottom: 14px; }

@@ -14,11 +14,15 @@ const WEB = 'www.btaasociados.com';
 const ARGENTINA = [
   { nombre: 'Brenda Priscila Koldobsky', iniciales: 'BPK', cargo: 'Directora General', tel: '+5491164820441', telVer: '+54 9 11 6482-0441', mail: 'brendak@btaasociados.es',
     bio: 'Directora general de BTA en Argentina. Acompaña a promotores y empresas argentinas en la preparación de sus proyectos para la financiación internacional.' },
-  { nombre: 'Gustavo Adrián Ochoa', iniciales: 'GAO', cargo: 'Director Comercial', tel: '+5493512502346', telVer: '+54 9 351 250-2346', mail: 'gustavoochoa@btaasociados.es',
+  { nombre: 'Gustavo Adrián Ochoa', iniciales: 'GAO', foto: 'img/equipo-gustavo-ochoa.jpg', cargo: 'Director Comercial', tel: '+5493512502346', telVer: '+54 9 351 250-2346', mail: 'gustavoochoa@btaasociados.es',
     bio: 'Director comercial de BTA en Argentina. Identifica proyectos y empresas con necesidades de financiación y es su primer punto de contacto con la firma.' },
   { nombre: 'Adrián Rodríguez', iniciales: 'AR', cargo: 'Project Manager', tel: '+5491165387954', telVer: '+54 9 11 6538-7954', mail: 'adrianrodriguez@btaasociados.es',
     bio: 'Project manager de BTA en Argentina. Coordina el día a día de cada proyecto, la documentación y los plazos con promotores, bancos y contratistas.' },
 ];
+// Foto si la hay; si no, el círculo con las iniciales.
+const avatar = (p) => p.foto
+  ? `<img class="iniciales foto" src="${p.foto}" alt="${p.nombre}" width="480" height="480" loading="lazy">`
+  : `<div class="iniciales" aria-hidden="true">${p.iniciales}</div>`;
 const telLink = (p) => p.tel ? `<a href="tel:${p.tel}">${p.telVer}</a>` : '';
 const mailLink = (p) => p.mail ? `<a href="mailto:${p.mail}">${p.mail}</a>` : '';
 const contactoPersona = (p) => [telLink(p), mailLink(p)].filter(Boolean).join('<br>');
@@ -375,7 +379,7 @@ ${cabeceraPagina('Business Transformation Associates S.L.', 'Equipo', 'Equipo co
     <p class="antetitulo">Dirección · Europa</p>
     <div class="rejilla r1 sin-margen">
       <article class="persona destacada">
-        <div class="iniciales" aria-hidden="true">JIB</div>
+        ${avatar({ nombre: 'José Ignacio Bermejo', iniciales: 'JIB', foto: 'img/equipo-jose-ignacio-bermejo.jpg' })}
         <div>
           <h3>José Ignacio Bermejo</h3>
           <p class="cargo">Presidente &amp; CEO · Europa</p>
@@ -388,7 +392,7 @@ ${cabeceraPagina('Business Transformation Associates S.L.', 'Equipo', 'Equipo co
     <p class="antetitulo" style="margin-top:60px">Equipo · Argentina</p>
     <div class="rejilla r2 sin-margen">
 ${ARGENTINA.map(p => `      <article class="persona verde">
-        <div class="iniciales" aria-hidden="true">${p.iniciales}</div>
+        ${avatar(p)}
         <div>
           <h3>${p.nombre}</h3>
           <p class="cargo">${p.cargo} · Argentina</p>
